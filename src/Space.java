@@ -26,13 +26,27 @@ public Space(String name,int turns,Map<String,Items> inventory){
 	
 	public void pickUp(String item){
 		item=item.toLowerCase();
+		if(items.containsKey(item)){
 		System.out.println("You picked up "+ items.get(item));
+		Items picked=items.get("item");
+		inventory.put(picked.getName(), picked);
+		turns++;}
+		else{
+			System.out.println("You must be hallucinating because you realize this item isnt in the room");
+		}
 		
 	}
 	
 	public void drop(String item){
 		item = item.toLowerCase();
+		if(inventory.containsKey(item)){
 		System.out.println("You dropped " + items.get(item));
+		inventory.remove(item);
+		turns++;
+		}
+		else{
+			System.out.println("You can't quite drop something you don't have now can you?");
+		}
 	}
 	
 	public void Wait(){

@@ -31,12 +31,11 @@ public class harness implements Items{
 	@Override
 	public void drop() {
 		System.out.println("You look at the hold thing and decide it can't hold your weight"
-				+ "the thing looks like it has seen better days. You drop");
+				+ "the thing looks like it has seen better days. You drop"+this.getName());
 		
 	}
 	@Override
 	public String getName() {
-		// TODO Auto-generated method stub
 		return this.getName();
 	}
 
