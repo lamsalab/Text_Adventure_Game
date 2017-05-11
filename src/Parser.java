@@ -1,5 +1,3 @@
-
-import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
@@ -8,11 +6,13 @@ private Scanner in;
 private String input;
 private String commands;
 private String item;
+private Space space;
 Map<String, Runnable> map;
 
 
-	public Parser(Scanner in){
+	public Parser(Scanner in, Space space){
 		this.in = in;
+		this.space= space;
 	}
 	public void read(){
 		input = in.nextLine().toLowerCase();
@@ -20,31 +20,31 @@ Map<String, Runnable> map;
 		commands = data[0];
 		item = data[1];
 		
-		Commands state = new Commands();
+		
 		switch(commands){
 		case "lookaround" :
-			state.lookAround();
+			space.lookAround();
 			break;
 		case "pickup":
-			state.pickUp(item);
+			space.pickUp(item);
 			break;
 		case "drop":
-			state.drop(item);
+			space.drop(item);
 			break;
 		case "use":
-			state.use(item);
+			space.use(item);
 			break;
 		case "go":
-			state.go();
+			space.go(item);
 			break;
 		case "giveup":
-			state.giveUp();
+			space.giveUp();
 			break;
 			default:
 				throw new IllegalArgumentException();
 		}
 		
-		final Commands command = new Commands();
+		/*final Commands command = new Commands();
 		
 		map = new HashMap<>();
 		map.put("lookaround", new Runnable()  {
@@ -55,7 +55,7 @@ Map<String, Runnable> map;
 		});
 		
 		Runnable nextAction = map.get("lookaround");
-		nextAction.run();
+		nextAction.run();*/
 		
 
 		
