@@ -1,6 +1,7 @@
 import java.util.Map;
 
 public class CasinoFloor extends Space {
+	
 
 	public CasinoFloor(Map<String, Items> inventory) {
 		super("CasinoFloor", 0, inventory);
@@ -13,6 +14,7 @@ public class CasinoFloor extends Space {
 			System.out.println("The vodka starts to kick in as you lean over the hole."
 					+ " You loose your balance and fall to the basement." + " You land on our head as your neck snaps."
 					+ " That is the last sound you hear as everything turns black.");
+			System.exit(0);
 		}
 		if (((Rope) inventory.get("rope")).used()) {
 			basement();
@@ -28,6 +30,7 @@ public class CasinoFloor extends Space {
 			System.out.println("You take a step forward and fall into the hole. "
 					          +"You land on our head as your neck snaps."
 						      +" That is the last sound you hear as everything turns black.");
+			System.exit(0);
 			return null;
 		} else if (direction.equals("south ")) {
 			System.out.println("You really need to know where you're going.");
@@ -36,11 +39,13 @@ public class CasinoFloor extends Space {
 			System.out.println("You take a step forward and fall into the hole. "
 			                   +"You land on our head as your neck snaps."
 				               +" That is the last sound you hear as everything turns black.");
+			System.exit(0);
 			return null;
 		} else if (direction.equals("west ")) {
 			System.out.println("You take a step forward and fall into the hole. "
 			                   +"You land on our head as your neck snaps."
 				               +" That is the last sound you hear as everything turns black.");
+			System.exit(0);
 			return null;
 		} else {
 			System.out.println("That's not even a direction!");

@@ -19,16 +19,16 @@ public class Elevator extends Space {
 
 
 	public Space go(String direction) {
-		if (direction.equals("west")) {
+		if (direction.equals("west ")) {
 			System.out.println("You just banged your head on the door. Be careful!");
 			return null;
-		} else if (direction.equals("east")) {
+		} else if (direction.equals("east ")) {
 			System.out.println("You really need to know where you're going.");
 			return null;
-		} else if (direction.equals("south")) {
+		} else if (direction.equals("south ")) {
 			System.out.println("Are you serious? You dont have any sense of direction.");
 			return null;
-		} else if (direction.equals("north")) {
+		} else if (direction.equals("north ")) {
 			return new Stairwell(inventory);
 		} else {
 			System.out.println("That's not even a direction!");

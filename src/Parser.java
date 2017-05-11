@@ -59,6 +59,8 @@ public class Parser {
 					item += data[i];
 					item += " "; 
 				}
+			} else if (commands.equals("look")){
+				commands = input;
 			}
 			//else if (commands.equals("go"))
 		} else {
