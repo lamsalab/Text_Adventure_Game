@@ -10,9 +10,9 @@ public class ID implements Items {
 	}
 
 	@Override
-	public void description() {
-		System.out.println("A blood stained ID lying next to the corpse of the male of the elevator in the corner."
-				+ "it could provide some useful information about who he is and why is there");
+	public String description() {
+		return "A blood stained ID lying next to the corpse of the male of the elevator in the corner."
+				+ "it could provide some useful information about who he is and why is there";
 
 	}
 

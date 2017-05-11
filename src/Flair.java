@@ -13,8 +13,8 @@ public class Flair implements Items {
     + "can make out words on the wall");
  }
  @Override
- public void description() {
-  System.out.println("Several black flairs laying around in the hallway ");
+ public String description() {
+  return"Several black flairs laying around in the hallway ";
  }
  @Override
  public String getName() {

@@ -42,7 +42,7 @@ Map<String, Runnable> map;
 		input = in.nextLine().toLowerCase();
 		int number = countWords(input);
 		
-		if(number > 1){
+		if(number == 1){
 		String [] data= input.split(" ");
 		commands = data[0];
 		item = data[1];
@@ -55,42 +55,26 @@ Map<String, Runnable> map;
 		switch(commands){
 		case "lookaround" :
 			space.lookAround();
-			return null;
+			return this.space;
 		case "pickup":
 			space.pickUp(item);
-			return null;
+			return this.space;
 		case "drop":
 			space.drop(item);
-			return null;
+			return this.space;
 		case "use":
 			space.use(item);
-			return null;
+			return this.space;
 		case "go":
 			return space.go(item);
 		case "giveup":
 			space.giveUp();
-			return null;
+			return this.space;
 		case "wait":
 			space.Wait();
-			return null;
+			return this.space;
 			default:
 				throw new IllegalArgumentException();
-		}
-		
-		/*final Commands command = new Commands();
-		
-		map = new HashMap<>();
-		map.put("lookaround", new Runnable()  {
-			@Override
-			public void run() {
-				command.lookAround();
-			}
-		});
-		
-		Runnable nextAction = map.get("lookaround");
-		nextAction.run();*/
-		
-
-		
+		}		
 	}
 }

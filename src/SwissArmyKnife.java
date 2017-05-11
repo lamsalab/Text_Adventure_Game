@@ -10,8 +10,8 @@ public class SwissArmyKnife implements Items{
 		
 	}
 
-	public void description() {
-		System.out.println("It is a multipurpose tool that can perform a range of tasks from filing metal to cutting wood.");		
+	public String description() {
+		return "It is a multipurpose tool that can perform a range of tasks from filing metal to cutting wood.";		
 	}
 
 	public String getName() {

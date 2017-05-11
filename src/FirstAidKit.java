@@ -1,15 +1,15 @@
 
 public class FirstAidKit implements Items {
 	public void use() {
-		System.out.println("You have used the first aid kit. Any existing health issues has been resolved. The explosions inside your head have fiannly calmed down.");
+		System.out.println("You have used the first aid kit. Any existing health issues has been resolved. The explosions inside your head have finally calmed down.");
 	}
 
-	public void description() {
-		System.out.println("Contains supplies for any medical emergency including bleeding, pain, etc.");
+	public String description() {
+		return "Contains supplies for any medical emergency including bleeding, pain, etc.";
 	}
 
 	public String getName() {
-		return "FirstAidKit";
+		return "firstaidkit";
 	}
 
 	@Override

@@ -10,9 +10,9 @@ public class Rope implements Items {
   
  }
  @Override
- public void description() {
-  System.out.println("A thick black rope. It looks millitary grade. The guy in the elevator"
-    + "must have dropped it or maybe the person who did him in, either way you don't care");
+ public String description() {
+  return "A thick black rope. It looks millitary grade. The guy in the elevator"
+    + "must have dropped it or maybe the person who did him in, either way you don't care";
  }
  @Override
  public String getName() {

@@ -13,10 +13,10 @@ public Cellphone(){
     + "functionality");
  }
  @Override
- public void description() {
-  System.out.println("A white touchscreen phone you saw lying next to the body of a middle aged"
+ public String description() {
+  return "A white touchscreen phone you saw lying next to the body of a middle aged"
     + "man who well.....lets just say he didn't make it. It seems in good shape"
-    + "perhaps even usable");
+    + "perhaps even usable";
  }
  @Override
  public String getName() {

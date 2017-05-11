@@ -6,9 +6,10 @@ public class Penthouse extends Space {
 		items.put("flashlight", new FlashLight());
 		items.put("deadgoldfish", new DeadGoldFish());
 		items.put("swissarmyknife", new SwissArmyKnife());
+		items.put("firstaidkit", new FirstAidKit());
 		System.out.println(
 				"Your head hurts. Your're lying on the bloody floor. You have trouble breathing. You can't get up. You don't know what's happening. You're hungover."
-						+ "You try to move. Your body hurts. You feel nauseous. You throw up. You pass out. Five miutes later, you finally regain some consiousness. ");
+						+ "You try to move. Your body hurts. You feel nauseous. You throw up. You pass out. Five minutes later, you finally regain some consiousness. ");
 	}
 
 	public Space go(String direction) {
@@ -22,7 +23,13 @@ public class Penthouse extends Space {
 			System.out.println("Are you serious? You dont have any sense of direction.");
 			return null;
 		} else if (direction.equals("west")){
-			return new Elevator(this.turns, inventory);
+			if (this.turns < 4 && !this.inventory.containsKey("firstaidkid")){
+				System.out.println("You probably need to explore more before you leave. Make sure you have gotten rid of the headche first.");
+				return this;
+			}
+			else {
+				return new Elevator(inventory);
+			}
 		}
 		else {
 			System.out.println("That's not even a direction!");

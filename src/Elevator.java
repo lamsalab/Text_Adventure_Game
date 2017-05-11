@@ -3,8 +3,8 @@ import java.util.Map;
 
 public class Elevator extends Space {
 
-	public Elevator(int turns, Map<String, Items> inventory) {
-		super("Elevator", turns, inventory);
+	public Elevator( Map<String, Items> inventory) {
+		super("Elevator", 0, inventory);
 		items.put("cellphone", new Cellphone());
 		items.put("ID", new ID());
 		items.put("buttons", new Buttons());
@@ -29,7 +29,7 @@ public class Elevator extends Space {
 			System.out.println("Are you serious? You dont have any sense of direction.");
 			return null;
 		} else if (direction.equals("north")) {
-			return new Stairwell(this.turns, inventory);
+			return new Stairwell(inventory);
 		} else {
 			System.out.println("That's not even a direction!");
 			return null;

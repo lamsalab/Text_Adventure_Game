@@ -15,9 +15,9 @@ public class harness implements Items{
 	}
 
 	@Override
-	public void description() {
-		System.out.println("A sort of yellow-brown harness dropped by the helicopter hovering above you."
-				+ "this could be your only way out");
+	public String description() {
+		return "A sort of yellow-brown harness dropped by the helicopter hovering above you."
+				+ "this could be your only way out";
 		
 	}
 

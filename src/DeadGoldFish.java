@@ -7,10 +7,10 @@ public class DeadGoldFish implements Items {
 		System.out.println("TF are you do with this you piece of shit?");
 	}
 
-	public void description() {
-		System.out.println(
+	public String description() {
+		return
 				"Yellowish orange looking fish. The name starts with a 'G' and ends with 'fish'. For the dumb ones playing this game, "
-						+ "it is a Goldfish which is probably dead by now.");
+						+ "it is a Goldfish which is probably dead by now.";
 	}
 
 	public String getName() {

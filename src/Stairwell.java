@@ -1,8 +1,8 @@
  
 import java.util.Map;
 public class Stairwell extends Space{
- public Stairwell( int turns, Map<String, Items> inventory){
-  super("Stairwell",turns,inventory);
+ public Stairwell( Map<String, Items> inventory){
+  super("Stairwell",0,inventory);
   
   items.put("rope", new Rope());
   items.put("flair", new Flair());

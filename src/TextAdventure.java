@@ -10,11 +10,12 @@ private static int count;
 		inventory= new HashMap<>();
 		System.out.println("Welcome to the newly featured game called 'America under Trump'");
 		Space space = new Penthouse(inventory);
-		//Parser parser = new Parser(in, space);
 		while(count < 10){
 			Parser parser = new Parser(in, space);
 			space= parser.read();
+			count++;
 		}
+		System.out.println("It's too late now. The Soviets just dropped the biggest nuclear bomb. Even before you realize, you've been vaporized.");
 		in.close();
 	}
 }

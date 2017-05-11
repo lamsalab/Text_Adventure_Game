@@ -17,9 +17,9 @@ String name;
     + "to make for the doors immediately");
  }
  @Override
- public void description() {
-  System.out.println("Elevator buttons, pretty standard you push them and it takes you to the"
-    + "floor you want");
+ public String description() {
+  return "Elevator buttons, pretty standard you push them and it takes you to the"
+    + "floor you want";
   
  }
  @Override
