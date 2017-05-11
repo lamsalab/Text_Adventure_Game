@@ -12,7 +12,7 @@ private static int count;
 		Space space = new Penthouse(inventory);
 		while(count < 10){
 			Parser parser = new Parser(in, space);
-			space= parser.read();
+			space = parser.read();
 			count++;
 		}
 		System.out.println("It's too late now. The Soviets just dropped the biggest nuclear bomb. Even before you realize, you've been vaporized.");

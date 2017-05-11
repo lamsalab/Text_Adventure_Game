@@ -1,12 +1,13 @@
 public class Rope implements Items {
  private String name;
+ private boolean used = false;
  
  public Rope(){
   this.name="rope";
  }
  @Override
  public void use() {
-  System.out.println("You tie the rope around  and use it to pull");
+  System.out.println("You tie the rope to a casino table and slowly descend down to the basement.");
   
  }
  @Override
@@ -28,5 +29,9 @@ public class Rope implements Items {
  public void drop() {
   System.out.println("You let the rope go. You don't need it anymore and of all the items"
     + "you have found so far, it was the most bulky");
+ }
+ 
+ public boolean used() {
+     return used;
  }
 }

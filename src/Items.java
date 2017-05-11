@@ -10,6 +10,4 @@ public interface Items {
 
     public void drop();
 
-    public boolean used();
-
 }

@@ -28,7 +28,6 @@ public class Vodka implements Items{
         System.out.println("You decide now is probably not a good time for a drink and drop the bottle of " + this.getName() + ". Smart move!");   
     }
 
-    @Override
     public boolean used() {
         return used;
     }
