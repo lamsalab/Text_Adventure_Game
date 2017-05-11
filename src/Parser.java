@@ -14,32 +14,65 @@ Map<String, Runnable> map;
 		this.in = in;
 		this.space= space;
 	}
-	public void read(){
+	public static int countWords(String s){
+
+	    int wordCount = 0;
+
+	    boolean word = false;
+	    int endOfLine = s.length() - 1;
+
+	    for (int i = 0; i < s.length(); i++) {
+	        // if the char is a letter, word = true.
+	        if (Character.isLetter(s.charAt(i)) && i != endOfLine) {
+	            word = true;
+	            // if char isn't a letter and there have been letters before,
+	            // counter goes up.
+	        } else if (!Character.isLetter(s.charAt(i)) && word) {
+	            wordCount++;
+	            word = false;
+	            // last word of String; if it doesn't end with a non letter, it
+	            // wouldn't count without this.
+	        } else if (Character.isLetter(s.charAt(i)) && i == endOfLine) {
+	            wordCount++;
+	        }
+	    }
+	    return wordCount;
+	}
+	public Space read(){
 		input = in.nextLine().toLowerCase();
+		int number = countWords(input);
+		
+		if(number > 1){
 		String [] data= input.split(" ");
 		commands = data[0];
 		item = data[1];
+		}
+		else {
+			commands = input;
+		}
 		
 		
 		switch(commands){
 		case "lookaround" :
 			space.lookAround();
-			break;
+			return null;
 		case "pickup":
 			space.pickUp(item);
-			break;
+			return null;
 		case "drop":
 			space.drop(item);
-			break;
+			return null;
 		case "use":
 			space.use(item);
-			break;
+			return null;
 		case "go":
-			space.go(item);
-			break;
+			return space.go(item);
 		case "giveup":
 			space.giveUp();
-			break;
+			return null;
+		case "wait":
+			space.Wait();
+			return null;
 			default:
 				throw new IllegalArgumentException();
 		}

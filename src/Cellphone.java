@@ -1,7 +1,7 @@
-public class cellphone implements Items {
+public class Cellphone implements Items {
 String name;
 
-public cellphone(){
+public Cellphone(){
  this.name="cellphone";
 }
  @Override

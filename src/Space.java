@@ -1,5 +1,6 @@
 
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 
 public abstract class Space {
@@ -14,13 +15,18 @@ public abstract class Space {
 		items = new HashMap<String, Items>();
 		this.inventory = inventory;
 	}
-
+	
+//http://stackoverflow.com/questions/1066589/iterate-through-a-hashmap
 	public void lookAround() {
 		System.out.println(
 				"The place is surrounded by various mesmerizing items. Here the items that is in within your range of vision: ");
-		for (int i = 0; i < items.size(); i++) {
-			items.get(i).description();
-		}
+		Iterator it = items.entrySet().iterator();
+	    while (it.hasNext()) {
+	        Map.Entry pair = (Map.Entry)it.next();
+	        System.out.println(pair.getKey());
+	        it.remove(); // avoids a ConcurrentModificationException
+	    }		
+		
 	}
 
 	public void pickUp(String item) {
