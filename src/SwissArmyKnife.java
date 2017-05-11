@@ -1,6 +1,7 @@
 
 public class SwissArmyKnife implements Items{
 
+	
 	public void use() {
 		System.out.println("You have never used a SwissArmy Knife before. You are completely baffled by the existence of such multi-purpose tool "
 				+ "given your low IQ. But, you are determined to get out of this place before the Soviets turn the city into ashes. You "
