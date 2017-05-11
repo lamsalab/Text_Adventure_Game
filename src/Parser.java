@@ -2,61 +2,76 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class Parser {
-private Scanner in;
-private String input;
-private String commands;
-private String item;
-private Space space;
-Map<String, Runnable> map;
+	private Scanner in;
+	private String input;
+	private String commands;
+	private String item;
+	private Space space;
+	Map<String, Runnable> map;
 
-
-	public Parser(Scanner in, Space space){
+	public Parser(Scanner in, Space space) {
 		this.in = in;
-		this.space= space;
+		this.space = space;
+		item = "";
 	}
-	public static int countWords(String s){
 
-	    int wordCount = 0;
+	public static int countWords(String s) {
 
-	    boolean word = false;
-	    int endOfLine = s.length() - 1;
+		int wordCount = 0;
 
-	    for (int i = 0; i < s.length(); i++) {
-	        // if the char is a letter, word = true.
-	        if (Character.isLetter(s.charAt(i)) && i != endOfLine) {
-	            word = true;
-	            // if char isn't a letter and there have been letters before,
-	            // counter goes up.
-	        } else if (!Character.isLetter(s.charAt(i)) && word) {
-	            wordCount++;
-	            word = false;
-	            // last word of String; if it doesn't end with a non letter, it
-	            // wouldn't count without this.
-	        } else if (Character.isLetter(s.charAt(i)) && i == endOfLine) {
-	            wordCount++;
-	        }
-	    }
-	    return wordCount;
+		boolean word = false;
+		int endOfLine = s.length() - 1;
+
+		for (int i = 0; i < s.length(); i++) {
+			// if the char is a letter, word = true.
+			if (Character.isLetter(s.charAt(i)) && i != endOfLine) {
+				word = true;
+				// if char isn't a letter and there have been letters before,
+				// counter goes up.
+			} else if (!Character.isLetter(s.charAt(i)) && word) {
+				wordCount++;
+				word = false;
+				// last word of String; if it doesn't end with a non letter, it
+				// wouldn't count without this.
+			} else if (Character.isLetter(s.charAt(i)) && i == endOfLine) {
+				wordCount++;
+			}
+		}
+		return wordCount;
 	}
-	public Space read(){
+
+	public Space read() {
 		input = in.nextLine().toLowerCase();
 		int number = countWords(input);
-		
-		if(number == 1){
-		String [] data= input.split(" ");
-		commands = data[0];
-		item = data[1];
-		}
-		else {
+
+		if (number > 1) {
+			String[] data = input.split(" ");
+			commands = data[0];
+			if (commands.equals("use") || commands.equals("go")) {
+				for (int i = 1; i <= number - 1; i++) {
+					item += data[i];
+					item += " ";
+				}
+			} else if (commands.equals("pick")) {
+				commands += " up";
+				for (int i = 2; i <= number - 1; i++) {
+					System.out.println(data[i]);
+					item += data[i];
+					item += " "; 
+				}
+			}
+			//else if (commands.equals("go"))
+		} else {
 			commands = input;
 		}
-		
-		
-		switch(commands){
-		case "lookaround" :
+
+		System.out.println(item);
+
+		switch (commands) {
+		case "look around":
 			space.lookAround();
 			return this.space;
-		case "pickup":
+		case "pick up":
 			space.pickUp(item);
 			return this.space;
 		case "drop":
@@ -67,14 +82,15 @@ Map<String, Runnable> map;
 			return this.space;
 		case "go":
 			return space.go(item);
-		case "giveup":
+		case "give up":
 			space.giveUp();
 			return this.space;
 		case "wait":
 			space.Wait();
 			return this.space;
-			default:
-				throw new IllegalArgumentException();
-		}		
+		default:
+			System.out.println("That is not a valid command.");
+			return this.space;
+		}
 	}
 }

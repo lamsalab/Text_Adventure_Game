@@ -14,7 +14,7 @@ public class DeadGoldFish implements Items {
 	}
 
 	public String getName() {
-		return "GoldFish";
+		return "DeadGoldFish";
 	}
 
 	public void pickup() {

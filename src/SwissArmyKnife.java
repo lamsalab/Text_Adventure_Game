@@ -15,7 +15,7 @@ public class SwissArmyKnife implements Items{
 	}
 
 	public String getName() {
-		return "SwissArmyKnife";
+		return "Swiss Army Knife ";
 	}
 
 	@Override

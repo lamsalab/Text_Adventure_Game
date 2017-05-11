@@ -9,7 +9,7 @@ public class FirstAidKit implements Items {
 	}
 
 	public String getName() {
-		return "firstaidkit";
+		return "first aid kit ";
 	}
 
 	@Override
