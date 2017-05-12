@@ -8,16 +8,11 @@ public class Stairwell extends Space {
 		items.put("rope ", new Rope());
 		items.put("flare ", new Flare());
 
-		System.out.println("You fling yourself from the elevator cutting your feet on the glass as \n"
-				+ "you do. As you land hard on the floor the elevator gives way behind you and continues down the \n"
-				+ "chute. You make out the enormous thud as it crashes. You wouldn't have survived the fall. \n"
-				+ "You stop to remove the pieces of glass lodged in your feet. At this point pain is\n"
-				+ "irrelevant. You take a look around you and notice something strange about this \n"
-				+ "stairwell. It is one of those fancy stair wells with carpeting on the walls and floor \n"
-				+ "it must be the stairs that guests use whne they don't want to use the elevator. Despite \n"
-				+ "power going out there is a red glow a few feet from you, the only light and it is accompanied \n"
-				+ "by a hissing sound. flares! There are flares all over the staircase and one of them \n"
-				+ "is going off. You also notice a climbing rope hanging off one of the banisters.");
+		System.out.println("You fling yourself from the elevator into the stairwell and cut your right foot on a piece of glass.\n"
+				+ "But, at this point pain is irrelevant. You take a look around you and notice something strange.\n"
+				+ "Despite power going out, there is a red glow a few feet away from you. It is the only source of light\n"
+				+ "and it is accompanied by a hissing sound. Flares! There are flares scattered all over the place.\n"
+				+ "What else could be here?");
 	}
 
 	/**

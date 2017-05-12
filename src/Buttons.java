@@ -13,15 +13,10 @@ public class Buttons implements Items {
 	 */
 	@Override
 	public void use() {
-		System.out.println("You frantically push the elevator buttons. You need to get to the basement\n"
-				+ "that's all that matters. You jam down so hard on the large B button that you\n"
-				+ "leave some of the blood from your fingers on it. The floor disappears from beneath you.\n"
-				+ "Suddenly you come to a grinding halt, smashing your face against the wall\n"
-				+ "and busting your lip wide open. Blood gushes from the open wound but you dont have time to\n"
-				+ "think about it because you realize the elevator failed, you dont know how far it dropped\n"
-				+ "but you know you have to get out fast, the whole thing is quivering and no\n"
-				+ "telling how long it will hold before its next tumble with you in it. The door is\n"
-				+ "slightly ajar and you can make out a stairwell right outside the doors. You need\n"
+		System.out.println("You frantically push the elevator buttons. You need to get to the basement asap!\n"
+				+ "Suddenly, the elevator comes to a grinding halt, smashing your face against the wall\n"
+				+ "But you dont have time to think about the pain. You dont know how far it dropped but you know you have to get out fast.\n"
+				+ "The whole thing is quivering and you're uncertain if the elevators can hold still anymore. You need "
 				+ "to make for the doors immediately");
 		this.used = true;
 	}

@@ -42,9 +42,8 @@ public class Rope implements Items {
 	 */
 	@Override
 	public void pickup() {
-		System.out.println("Slowly but with great effort you wind the rope tightly around your waist. It will\n"
-				+ "probably come in handy later. It smells vaguely like mold and liqor, what on\n"
-				+ "earth were the people at the 7th arm using it for?");
+		System.out.println("Slowly but with great effort you wind the rope tightly around your waist. It will "
+				+ "probably come in handy later.");
 	}
 
 	/**

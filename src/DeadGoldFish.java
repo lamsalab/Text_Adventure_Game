@@ -11,7 +11,7 @@ public class DeadGoldFish implements Items {
 	 * @return void
 	 */
 	public void use() {
-		System.out.println("TF are you do with this you piece of shit?");
+		System.out.println("TF are you gonna use this for?!?");
 	}
 
 	/**

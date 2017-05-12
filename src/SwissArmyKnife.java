@@ -15,8 +15,8 @@ public class SwissArmyKnife implements Items {
 	 */
 	public void use() {
 		System.out.println(
-				"You have never used a SwissArmy Knife before. You are completely baffled by the existence of such multi-purpose tool \n"
-						+ "given your low IQ. But, you are determined to get out of this place before the Soviets turn the city into ashes. You \n"
+				"You are completely baffled by the existence of such multi-purpose tool given your low IQ.\n"
+						+ "But, you are determined to get out of this place before the Soviets turn the city into ashes. You\n"
 						+ "struggle to find the right tool to open the door. You try to crank it open with a toothpick. But it doesn't work. \n"
 						+ "Then you try a bunch of other tools but none of them work. Finally, you see the knife and use it to open the elevator");
 		this.used = true;

@@ -11,10 +11,9 @@ public class Cellphone implements Items {
 	 */
 	@Override
 	public void use() {
-		System.out.println("You tap the power button with your right hand and cross the fingers on your left\n"
-				+ "the phone turns on. Ecstatic you wait for it to completely boot up. It's \n"
-				+ "an iPhone, you aalways hated them but right now it almost seems like a good phone.\n"
-				+ "till you see there is no signal. Typical apple phone looks beautiful but no " + "functionality");
+		System.out.println("You tap the power button and wait for the iphone to completely boot up. You have always hated iphones\n"
+				+ "but you do not have any other choice. Then you realize, your gut reaction was right\n"
+				+ " The bloody iphone doesn't have any signal.");
 	}
 
 	/**

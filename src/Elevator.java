@@ -9,13 +9,10 @@ public class Elevator extends Space {
 		items.put("id ", new ID());
 		items.put("buttons ", new Buttons());
 		inventory.remove("swiss army knife ");
-		System.out.println("The elevator opens up and you let yourself in. It's unbelievable that it is \n"
-				+ "still working. The lights are flickering but everything seems in order. There is a deep \n"
-				+ "hum from below the floor but you ignore it. You've been though too much to care, you need \n"
-				+ "to get to the basement before time runs out. The glass on the floor barely bothers you \n"
-				+ "as you get in and the door shuts behind you.Then you notice the corpse lying slumped in the corner. You look \n"
-				+ "and notice it is a man and his ID is right next to him. There also seems to be a cellphone \n"
-				+ "next to it. Things are sort of looking up.");
+		System.out.println("The elevator opens up and you let yourself in. It's unbelievable that \n"
+				+ "everything seems in order. You need to get to the basement before time runs out.\n"
+				+ "But, then you notice a corpse lying slumped in the corner. \n"
+				+ "and notice some items that may be of use");
 	}
 
 	/**

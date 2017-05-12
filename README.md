@@ -14,6 +14,7 @@ use swiss army knife
 go west
 pick up buttons
 use buttons
+go north
 pick up rope
 pick up flare
 go north

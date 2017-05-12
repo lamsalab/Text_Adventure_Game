@@ -14,7 +14,7 @@ public class FlashLight implements Items {
 	 */
 	public void use() {
 		System.out.println(
-				"The lights start to flicker. You give a gentle tap and it still flickers. You swing the flashlight on you palm\n"
+				"The flashlight start to flicker. You give a gentle tap and it still flickers. You swing the flashlight on you palm\n"
 						+ "very hard on the inside of your palm and suddenly it starts working.");
 		this.used = true;
 	}

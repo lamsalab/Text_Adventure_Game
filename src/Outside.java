@@ -5,12 +5,11 @@ public class Outside extends Space {
 	public Outside(Map<String, Items> inventory) {
 		super("outside", inventory);
 
-		System.out.println("You land hard on your back as you are flung threw the air by the sudden explosion\n"
-				+ ". Your ears are ringing and your left arm goes numb. It goes very dark and very quiet.\n"
-				+ "..................Suddenly heat, you think you are burning so you sit up as quick\n"
-				+ "as your body will allow ripping a few scabs as you do. Its not heat. It's the sun. You made it outside\n"
-				+ "The explosion flung you from the basement door into the green lawn. You ears are ringing but you \n"
-				+ "make out the sound of helicopter blades spining through the air. If only there was a way to signal for help");
+		System.out.println("You land hard on your back as the explosion throws you off into the air.\n"
+				+ "Your ears are ringing and your left arm goes numb.\n"
+				+ "Moments later, you feel radiation make contact with your skin. It's the sun! You made it outside.\n"
+				+ "The explosion flung you from the basement door into the lawn. Depite the buzzing in your ear,"
+				+ "you hear a helicopter approach you. If only there was a way to signal for help...");
 
 		if (!inventory.containsKey("flare ")) {
 			System.out.println("Unfortunately, you do not have anything to signal for the helicopter.\n"

@@ -4,11 +4,10 @@ public class Basement extends Space {
 	public Basement(Map<String, Items> inventory) {
 		super("Basement", inventory);
 		inventory.remove("rope ");
-		System.out.println(
-				"You slowly descend down the rope until you reach the floor. It stinks. Not in the this is a bad day kind of way but in the rotting flesh and faeces kind of way \n"
-						+ "You're not even sure if coming down here was the right thing but with the casino door blocked by the hole this is the only way out \n"
-						+ "Your feet land in something wet but you don't want to think about it. You need some light. The entire basement is pitch black and has \n"
-						+ "a sinister feel to it. ");
+		System.out.println("You slowly descend down the rope until you reach the floor. It stinks of rotting flesh and dog faeces.\n"
+				+ "Now, you're unsure if coming to the basement was the right thing but you really didn't have a choice. \n"
+				+ "The entire basement is pitch black You need some light. But, it's too damp to light up flares.");
+				
 	}
 
 	/**

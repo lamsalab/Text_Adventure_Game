@@ -41,9 +41,8 @@ public class Flare implements Items {
 	 */
 	@Override
 	public void pickup() {
-		System.out.println("They are scattered everywhere.Bracing yourself on the wall you manage to \n"
-				+ "move around the current flight and pick up as many flares as you can. The pain\n"
-				+ "from the glass in the elevator make each step almost unbearbale but you keep " + "moving");
+		System.out.println("They are scattered everywhere but you manage to pick up as many flares as you can. The pain\n"
+			    + "in your foot from the glass in the elevator makes each step almost unbearbale but you keep moving.");
 	}
 
 	/**

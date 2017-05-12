@@ -9,7 +9,7 @@ public class CasinoFloor extends Space {
 		items.put("vodka ", vodka);
 		System.out.println("As you enter the casino floor you notice a gaping hole in the center of the floor.\n"
 				+ "You approach the large hole in the floor of the room and see the basement directly beneath you.\n"
-				+ "Now would be a good time to have a rope.");
+				+ "What can you do to swing down the hole into the basement?");
 	}
 
 	/**
@@ -37,7 +37,7 @@ public class CasinoFloor extends Space {
 				} else {
 					System.out.println("You take a step forward and fall into the hole. \n"
 							+ "You land on our head as your neck snaps.\n"
-							+ " That is the last sound you hear as everything turns black.\n");
+							+ "That is the last sound you hear as everything turns black.\n");
 					System.exit(0);
 					return this;
 				}
@@ -47,13 +47,13 @@ public class CasinoFloor extends Space {
 			} else if (direction.equals("north ")) {
 				System.out.println("You take a step forward and fall into the hole. \n"
 						+ "You land on our head as your neck snaps.\n"
-						+ " That is the last sound you hear as everything turns black.\n");
+						+ "That is the last sound you hear as everything turns black.\n");
 				System.exit(0);
 				return this;
 			} else if (direction.equals("west ")) {
 				System.out.println("You take a step forward and fall into the hole. \n"
 						+ "You land on our head as your neck snaps.\n"
-						+ " That is the last sound you hear as everything turns black.\n");
+						+ "That is the last sound you hear as everything turns black.\n");
 				System.exit(0);
 				return this;
 			} else {
