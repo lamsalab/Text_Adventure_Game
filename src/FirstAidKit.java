@@ -1,7 +1,10 @@
 
 public class FirstAidKit implements Items {
+	boolean used = false;
+	
 	public void use() {
 		System.out.println("You have used the first aid kit. Any existing health issues has been resolved. The explosions inside your head have finally calmed down.");
+		used = true;
 	}
 
 	public String description() {
@@ -14,15 +17,19 @@ public class FirstAidKit implements Items {
 
 	@Override
 	public void pickup() {
-		System.out.println("Every step you take increases your pain by 10 folds. You slowly approach a mark roughly marked by a cross. You struggle to keep your open. "
-				+ "But you manage to somehow pick the" + this.getName());
+		System.out.println("Every step you take increases your pain by 10 folds. You slowly approach a mark roughly marked by a cross. You struggle to keep your eyes open. "
+				+ "But you manage to somehow pick the " + this.getName());
 		
 	}
 
 	@Override
 	public void drop() {
-		System.out.println("You are not worthy of keeping this" + this.getName() + "Hence, the item has been dropped.");
+		System.out.println("You are not worthy of keeping this " + this.getName() + "Hence, the item has been dropped.");
 		
+	}
+	
+	public boolean used(){
+		return used;
 	}
 
 }

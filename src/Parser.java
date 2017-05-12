@@ -55,19 +55,17 @@ public class Parser {
 			} else if (commands.equals("pick")) {
 				commands += " up";
 				for (int i = 2; i <= number - 1; i++) {
-					System.out.println(data[i]);
 					item += data[i];
 					item += " "; 
 				}
-			} else if (commands.equals("look")){
+			} else if (commands.equals("look") || (commands.equals("give"))){
 				commands = input;
 			}
-			//else if (commands.equals("go"))
+
 		} else {
 			commands = input;
 		}
 
-		System.out.println(item);
 
 		switch (commands) {
 		case "look around":
@@ -89,6 +87,12 @@ public class Parser {
 			return this.space;
 		case "wait":
 			space.Wait();
+			return this.space;
+		case "help":
+			space.help();
+			return this.space;
+		case "inventory":
+			space.inventory();
 			return this.space;
 		default:
 			System.out.println("That is not a valid command.");

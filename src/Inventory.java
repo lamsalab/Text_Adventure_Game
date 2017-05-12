@@ -1,10 +1,10 @@
 import java.util.HashMap;
 import java.util.Map;
 
-public class inventory {
+public class Inventory {
 	public Map<String,Items> items;
 	
-	public inventory(){
+	public Inventory(){
 		this.items=new HashMap<String,Items>();
 		
 	}

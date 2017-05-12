@@ -2,18 +2,18 @@
 public class Vodka implements Items{
     private boolean used = false;
     public void use() {
-        System.out.println("All this trying to save yourself is getting too much for you. "
-                + "You need to sit down and have a drink before you go insane. "
+        System.out.println("All this trying to save yourself is getting too much for you. \n"
+                + "You need to sit down and have a drink before you go insane. \n"
                 + "You chug down half the bottle numbing any pain you felt.");
         used = true;
     }
 
     public String description() {
-        return "The fanciest bottle of vodka you have seen. Is labelled 'Yamskaya Russian Vodka'";
+        return "The fanciest bottle of vodka you have seen. It is labelled 'Yamskaya Russian Vodka'";
     }
 
     public String getName() {
-        return "Vodka";
+        return "Vodka ";
     }
 
     @Override
