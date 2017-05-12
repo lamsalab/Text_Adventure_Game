@@ -1,4 +1,4 @@
-import java.util.Map;
+
 import java.util.Scanner;
 
 public class Parser {
@@ -7,7 +7,6 @@ public class Parser {
 	private String commands;
 	private String item;
 	private Space space;
-	Map<String, Runnable> map;
 
 	public Parser(Scanner in, Space space) {
 		this.in = in;
@@ -15,6 +14,12 @@ public class Parser {
 		item = "";
 	}
 
+	// http://stackoverflow.com/questions/5864159/count-words-in-a-string-method
+	/**
+	 * 
+	 * @param s a String
+	 * @return an Int
+	 */
 	public static int countWords(String s) {
 
 		int wordCount = 0;
@@ -40,6 +45,10 @@ public class Parser {
 		return wordCount;
 	}
 
+	/**
+	 * 
+	 * @return a Space
+	 */
 	public Space read() {
 		input = in.nextLine().toLowerCase();
 		int number = countWords(input);
@@ -47,7 +56,7 @@ public class Parser {
 		if (number > 1) {
 			String[] data = input.split(" ");
 			commands = data[0];
-			if (commands.equals("use") || commands.equals("go")) {
+			if (commands.equals("use") || commands.equals("go") || commands.equals("drop")) {
 				for (int i = 1; i <= number - 1; i++) {
 					item += data[i];
 					item += " ";
@@ -56,16 +65,15 @@ public class Parser {
 				commands += " up";
 				for (int i = 2; i <= number - 1; i++) {
 					item += data[i];
-					item += " "; 
+					item += " ";
 				}
-			} else if (commands.equals("look") || (commands.equals("give"))){
+			} else if (commands.equals("look") || (commands.equals("give"))) {
 				commands = input;
 			}
 
 		} else {
 			commands = input;
 		}
-
 
 		switch (commands) {
 		case "look around":

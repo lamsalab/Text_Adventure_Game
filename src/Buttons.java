@@ -1,11 +1,16 @@
 public class Buttons implements Items {
 	private String name;
-	private boolean used = false;
+	private boolean used;
 
 	public Buttons() {
 		this.name = "buttons ";
+		this.used = false;
 	}
 
+	/**
+	 * 
+	 * @return void
+	 */
 	@Override
 	public void use() {
 		System.out.println("You frantically push the elevator buttons. You need to get to the basement\n"
@@ -18,20 +23,32 @@ public class Buttons implements Items {
 				+ "telling how long it will hold before its next tumble with you in it. The door is\n"
 				+ "slightly ajar and you can make out a stairwell right outside the doors. You need\n"
 				+ "to make for the doors immediately");
-		used = true;
+		this.used = true;
 	}
 
+	/**
+	 * 
+	 * @return a String
+	 */
 	@Override
 	public String description() {
 		return "Elevator buttons, pretty standard you push them and it takes you to the " + "floor you want";
 
 	}
 
+	/**
+	 * 
+	 * @return a String
+	 */
 	@Override
 	public String getName() {
 		return name;
 	}
 
+	/**
+	 * 
+	 * @return void
+	 */
 	@Override
 	public void pickup() {
 		System.out.println("Silly child you dont actually pick up the elevator buttons but now you can use \n"
@@ -39,14 +56,22 @@ public class Buttons implements Items {
 
 	}
 
+	/**
+	 * 
+	 * @return void
+	 */
 	@Override
 	public void drop() {
 
 		System.out.println("You can't drop elevator buttons but now you cant use them\n"
 				+ "point is this isn't a smart idea unless you already used them wink");
 	}
-	
-	public boolean used(){
+
+	/**
+	 * 
+	 * @return a boolean
+	 */
+	public boolean used() {
 		return used;
 	}
 }

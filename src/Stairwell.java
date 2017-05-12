@@ -3,7 +3,7 @@ import java.util.Map;
 
 public class Stairwell extends Space {
 	public Stairwell(Map<String, Items> inventory) {
-		super("Stairwell",  inventory);
+		super("Stairwell", inventory);
 		inventory.remove("buttons ");
 		items.put("rope ", new Rope());
 		items.put("flare ", new Flare());
@@ -20,6 +20,10 @@ public class Stairwell extends Space {
 				+ "is going off. You also notice a climbing rope hanging off one of the banisters.");
 	}
 
+	/**
+	 * @param direction a String
+	 * @return  a Space
+	 */
 	public Space go(String direction) {
 		if (direction.equals("west ")) {
 			System.out.println("You just banged your head on the wall. Be careful!");
@@ -39,6 +43,10 @@ public class Stairwell extends Space {
 		}
 	}
 
+	/**
+	 * 
+	 * @return void
+	 */
 	public void use(String item) {
 		if (inventory.containsKey(item)) {
 			if (item.equals("rope ")) {
@@ -50,7 +58,6 @@ public class Stairwell extends Space {
 		} else {
 			System.out.println("You do not have this item in the inventory yet.");
 		}
-		
+
 	}
 }
-

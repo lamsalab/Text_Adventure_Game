@@ -1,13 +1,13 @@
 
 public interface Items {
-    public void use();
+	public void use();
 
-    public String description();
+	public String description();
 
-    public String getName();
+	public String getName();
 
-    public void pickup();
+	public void pickup();
 
-    public void drop();
+	public void drop();
 
 }

@@ -1,6 +1,14 @@
 public class ID implements Items {
-	private String name = "id ";
+	private String name;
 
+	public ID() {
+		this.name = "id ";
+	}
+
+	/**
+	 * 
+	 * @return void
+	 */
 	@Override
 	public void use() {
 		System.out.println("The photo on the ID is smudged but you can make out the face of a middle aged\n"
@@ -9,6 +17,10 @@ public class ID implements Items {
 				+ "of Russian nuclear intelligence");
 	}
 
+	/**
+	 * 
+	 * @return a String
+	 */
 	@Override
 	public String description() {
 		return "A blood stained ID lying next to the corpse of the male of the elevator in the corner.\n"
@@ -16,11 +28,19 @@ public class ID implements Items {
 
 	}
 
+	/**
+	 * 
+	 * @return a String
+	 */
 	@Override
 	public String getName() {
 		return name;
 	}
 
+	/**
+	 * 
+	 * @return void
+	 */
 	@Override
 	public void pickup() {
 		System.out.println("Careful not to touch the corpse, you reach out with your left arm,\n"
@@ -28,6 +48,10 @@ public class ID implements Items {
 
 	}
 
+	/**
+	 * 
+	 * @return void
+	 */
 	@Override
 	public void drop() {
 		System.out.println("You drop the ID, it gives you the creeps, you don't know why the 7th Arm is\n"

@@ -5,9 +5,9 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 public abstract class Space {
-	public Map<String, Items> items;
-	public Map<String, Items> inventory;
-	public String name;
+	protected Map<String, Items> items;
+	protected Map<String, Items> inventory;
+	protected String name;
 
 
 	public Space(String name, Map<String, Items> inventory) {
@@ -16,6 +16,10 @@ public abstract class Space {
 		this.inventory = inventory;
 	}
 
+	/**
+	 * 
+	 * @return void
+	 */
 	// http://stackoverflow.com/questions/1066589/iterate-through-a-hashmap
 	public void lookAround() {
 		System.out.println(
@@ -28,6 +32,10 @@ public abstract class Space {
 	
 	}
 
+	/**
+	 * 
+	 * @return void
+	 */
 	public void pickUp(String item) {
 		item = item.toLowerCase();
 		if (items.containsKey(item)) {
@@ -43,6 +51,10 @@ public abstract class Space {
 
 	}
 
+	/**
+	 * 
+	 * @return void
+	 */
 	public void drop(String item) {
 		item = item.toLowerCase();
 		if (inventory.containsKey(item)) {
@@ -56,6 +68,10 @@ public abstract class Space {
 	
 	}
 
+	/**
+	 * 
+	 * @return void
+	 */
 	public void Wait() {
 		System.out.println(
 				"Exhausted you let yourself sink to the floor to think things through. As horrifying as this day has been you realize that you are ok\n"
@@ -65,6 +81,10 @@ public abstract class Space {
 
 	}
 
+	/**
+	 * 
+	 * @return void
+	 */
 	public void use(String item) {
 		if (inventory.containsKey(item)) {
 			Items usable = inventory.get(item);
@@ -75,15 +95,27 @@ public abstract class Space {
 		
 	}
 
+	/**
+	 * 
+	 * @return void
+	 */
 	public Space go(String direction) {
 		return null;
 	}
 
+	/**
+	 * 
+	 * @return void
+	 */
 	public void giveUp() {
 		System.out.println("It's all too much for you. Why bother with this mess? You pull cyanaide pills out of your pocket and kill yourself");
 		System.exit(0);
 	}
 
+	/**
+	 * 
+	 * @return void
+	 */
 	public void help(){
 		System.out.println("These are the possible commands:\n"
 				+ "Wait: wait in the room for one turn\n"
@@ -98,6 +130,10 @@ public abstract class Space {
 		
 	}
 	
+	/**
+	 * 
+	 * @return void
+	 */
 	public void inventory(){
 		Iterator<Entry<String, Items>> it = inventory.entrySet().iterator();
 		while (it.hasNext()) {

@@ -11,6 +11,10 @@ public class Basement extends Space {
 						+ "a sinister feel to it. ");
 	}
 
+	/**
+	 * @param direction a String
+	 * @return  a Space
+	 */
 	public Space go(String direction) {
 		if (this.inventory.containsKey("flashlight ")) {
 			if (((FlashLight) inventory.get("flashlight ")).used()) {

@@ -3,7 +3,7 @@ import java.util.Map;
 
 public class Elevator extends Space {
 
-	public Elevator( Map<String, Items> inventory) {
+	public Elevator(Map<String, Items> inventory) {
 		super("Elevator", inventory);
 		items.put("cellphone ", new Cellphone());
 		items.put("id ", new ID());
@@ -18,7 +18,10 @@ public class Elevator extends Space {
 				+ "next to it. Things are sort of looking up.");
 	}
 
-
+	/**
+	 * @param direction a String
+	 * @return  a Space
+	 */
 	public Space go(String direction) {
 		if (direction.equals("west ")) {
 			System.out.println("You just banged your head on the door. Be careful!");
@@ -30,10 +33,9 @@ public class Elevator extends Space {
 			System.out.println("Are you serious? You dont have any sense of direction.");
 			return this;
 		} else if (direction.equals("north ")) {
-			if (((Buttons) inventory.get("buttons ")).used()){
-			return new Stairwell(inventory);
-			}
-			else{
+			if (((Buttons) inventory.get("buttons ")).used()) {
+				return new Stairwell(inventory);
+			} else {
 				System.out.println("Try using the buttons before going North.");
 				return this;
 			}
@@ -42,5 +44,5 @@ public class Elevator extends Space {
 			return this;
 		}
 	}
-	
+
 }

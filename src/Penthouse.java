@@ -1,8 +1,9 @@
 import java.util.HashMap;
 
 public class Penthouse extends Space {
+
 	public Penthouse(HashMap<String, Items> inventory) {
-		super("Penthouse",  inventory);
+		super("Penthouse", inventory);
 		items.put("flashlight ", new FlashLight());
 		items.put("dead gold fish ", new DeadGoldFish());
 		items.put("swiss army knife ", new SwissArmyKnife());
@@ -12,6 +13,10 @@ public class Penthouse extends Space {
 						+ "You try to move. Your body hurts. You feel nauseous. You throw up. You pass out. Five minutes later, you finally regain some consiousness. ");
 	}
 
+	/**
+	 * @param direction a String
+	 * @return  a Space
+	 */
 	public Space go(String direction) {
 		if (direction.equals("north ")) {
 			System.out.println("You just banged your head on the wall. Be careful!");
